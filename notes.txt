@@ -278,3 +278,11 @@ click evenets :- onclick , ondblclick , onsubmit , onchange .
 mouse events :- mouseover , mouseleave
 
 key events :- keydown , keyup , keypress(deprocated).
+
+
+
+task:
+  
+  take the array of objects where each object contains empid, empname,empcompany,empsalary amd empaddress where 
+  empaddress further contains an object which includes two properties such as empcity,Area.
+  display all this employees data on the UI through javascript.

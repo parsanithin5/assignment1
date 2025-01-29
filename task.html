@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+</head>
+<body>
+    <table border="2" cellpadding="10px" cellspacing="0px">
+        <thead>
+            <tr>
+                <th>Sl.no</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th>Area</th>
+            </tr>
+        </thead>
+        <tbody id="store">
+        </tbody>
+    </table>
+
+    <script>
+        let employes = [
+            {
+                empId: 1,
+                empName: "Manohar",
+                empCompany: "Google",
+                empSalary: 4856321,
+                empAddress: {
+                    empCity: "Kompally",
+                    empArea: "Hyd"
+                }
+            },
+            {
+                empId: 2,
+                empName: "Srijesh",
+                empCompany: "IBM",
+                empSalary: 4856321,
+                empAddress: {
+                    empCity: "Kukatpally",
+                    empArea: "Hyd"
+                }
+            },
+            {
+                empId: 3,
+                empName: "Vardhan",
+                empCompany: "Google",
+                empSalary: 884821,
+                empAddress: {
+                    empCity: "L.B. Nagar",
+                    empArea: "Hyd"
+                }
+            },
+            {
+                empId: 4,
+                empName: "Nithin",
+                empCompany: "Infosys",
+                empSalary: 98878554,
+                empAddress: {
+                    empCity: "Medchal",
+                    empArea: "Medchal"
+                }
+            },
+            {
+                empId: 5,
+                empName: "Sathwik",
+                empCompany: "Google",
+                empSalary: 568561,
+                empAddress: {
+                    empCity: "Patny",
+                    empArea: "Hyd"
+                }
+            },
+        ];
+
+        let store = document.getElementById("store");
+
+        employes.forEach(user => {
+            store.innerHTML += `
+            <tr>
+                <td>${user.empId}</td>
+                <td>${user.empName}</td>
+                <td>${user.empCompany}</td>
+                <td>${user.empSalary}</td>
+                <td>${user.empAddress.empCity}</td>
+                <td>${user.empAddress.empArea}</td>
+            </tr>`;
+        });
+    </script>
+</body>
+</html>
